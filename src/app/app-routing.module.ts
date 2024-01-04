@@ -19,17 +19,18 @@ const routes: Routes = [
       ),
   },
   {
+    path: '',
+    redirectTo: '/register',
+    pathMatch: 'full',
+  },
+  {
     path: 'home',
     loadChildren: () =>
       import('./pages/home/home.module').then(
         (module) => module.HomeModule
       ),
   },
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full',
-  },
+
   
 
   {

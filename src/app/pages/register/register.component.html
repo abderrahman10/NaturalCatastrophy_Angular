@@ -12,31 +12,71 @@
           <span class="p-input-icon-left w-full ">
             <i class="pi pi-user"></i>
             <input id="username" type="text" pInputText class="w-full md:w-25rem"  formControlName="username"  placeholder="username">
+            <div  class="error-message"
+            *ngIf=" RegisterForm.get('username')?.hasError('required') &&
+             RegisterForm.get('username')?.dirty"
+            >
+            <p-message severity="error" text="username is required"></p-message>
+
+            </div>
+          
+          
           </span>
 
           <span class="p-input-icon-left w-full mt-4 ">
             <i class="pi pi-user"></i>
             <input id="firstName" type="text" pInputText class="w-full md:w-25rem"  formControlName="firstName"  placeholder="firstName">
+            <div  class="error-message"
+            *ngIf=" RegisterForm.get('firstName')?.hasError('required') &&
+             RegisterForm.get('firstName')?.dirty"
+            >
+            <p-message severity="error" text="firstName is required"></p-message>
+
+            </div>
+         
+         
           </span>
 
           <span class="p-input-icon-left w-full mt-4">
             <i class="pi pi-user"></i>
             <input id="lastName" type="text" pInputText class="w-full md:w-25rem"  formControlName="lastName" placeholder="lastName">
-        </span>
+           
+            <div  class="error-message"
+            *ngIf=" RegisterForm.get('lastName')?.hasError('required') &&
+             RegisterForm.get('lastName')?.dirty"
+            >
+            <p-message severity="error" text="lastName is required"></p-message>
+
+            </div>
+          </span>
 
           <span class="p-input-icon-left w-full mt-4">
               <i class="pi pi-envelope"></i>
-              <input id="address" type="text" pInputText class="w-full md:w-25rem"  formControlName="address" placeholder="address">
+            <input id="address" type="text" pInputText class="w-full md:w-25rem"  formControlName="address" placeholder="address">
+            <div  class="error-message"
+            *ngIf=" RegisterForm.get('address')?.hasError('required') &&
+             RegisterForm.get('address')?.dirty"
+            >
+            <p-message severity="error" text="address is required"></p-message>
+
+            </div>
           </span>
   
           <span class="p-input-icon-left w-full mt-4">
             <i class="pi pi-mobile"></i>
             <input id="phone" type="text" pInputText class="w-full md:w-25rem"  formControlName="phone" placeholder="phone">
-        </span>
+            <div  class="error-message"
+            *ngIf=" RegisterForm.get('phone')?.hasError('required') &&
+             RegisterForm.get('phone')?.dirty"
+            >
+            <p-message severity="error" text="phone is required"></p-message>
+
+            </div>
+          </span>
         
      
-          <button pButton pRipple label="Sign Up" type="submit" class="w-full mb-4 mt-4"  ></button>
-          <span class="font-medium text-600">Already have an account? <a class="font-semibold cursor-pointer text-900 hover:text-primary transition-colors transition-duration-300" routerLink="../">Login</a></span>
+          <button pButton pRipple label="Sign Up" type="submit" class="w-full mb-4 mt-4"   ></button>
+          <span class="font-medium text-600">Already have an account? <a class="font-semibold cursor-pointer text-900 hover:text-primary transition-colors transition-duration-300" routerLink="../register">Login</a></span>
 
       </div>
     </form>

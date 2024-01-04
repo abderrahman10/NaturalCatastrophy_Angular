@@ -33,7 +33,7 @@ register() {
     this.isLoading = true;
      this.authservice.register( this.RegisterForm.value).subscribe( (res) => {
         console.log("register Res:", res);
-        this.router.navigate(['/']);
+        this.router.navigate(['../home']);
     },
     (error) => {
       this.isLoading = false;
